@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit article{% endblock %}
+
+{% block javascripts %}
+    <script>
+        var simplemde = new SimpleMDE({ element: document.getElementById("MyID") });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <form>
+        <label for="editor">Edit this article about {{ algorithm.name }}</label>
+        <textarea id="editor">
+        </textarea>
+    </form>
+{% endblock %}
