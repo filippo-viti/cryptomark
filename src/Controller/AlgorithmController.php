@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Algorithm;
-use App\Entity\CategoryTag;
 use App\Form\AlgorithmFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,20 +27,27 @@ class AlgorithmController extends AbstractController
     public function new(Request $request): Response
     {
         $algorithm = new Algorithm();
-        $tag = new CategoryTag();
-        $tag->setName("Hash Function");
-        $tag->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam justo.");
-        $tag->setColor(0xFF0000);
-        $algorithm->getTags()->add($tag);
 
         $form = $this->createForm(AlgorithmFormType::class, $algorithm);
         $form->handleRequest($request);
+        echo $form->getErrors();
         if ($form->isSubmitted() && $form->isValid()) {
-
+            $algorithm = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($algorithm);
+            $entityManager->flush();
+            $this->redirectToRoute('algorithm_success');
         }
         return $this->render('algorithm/new.html.twig', [
             'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/success", name="success")
+     */
+    public function success() {
+        // TODO implement success page
     }
 
     /**

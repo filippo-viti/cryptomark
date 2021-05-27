@@ -6,6 +6,7 @@ use App\Entity\Algorithm;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -17,15 +18,27 @@ class AlgorithmFormType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('creator', TextType::class)
-            ->add('year', IntegerType::class)
-            ->add('keyLength', IntegerType::class)
-            ->add('digestSize', IntegerType::class)
+            ->add('creator', TextType::class, [
+                'required' => false
+            ])
+            ->add('year', IntegerType::class, [
+                'required' => false
+            ])
+            ->add('keyLength', IntegerType::class, [
+                'required' => false
+            ])
+            ->add('digestSize', IntegerType::class, [
+                'required' => false
+            ])
             ->add('description', TextareaType::class)
             ->add('tags', CollectionType::class, [
                 'entry_type' => CategoryTagFormType::class,
                 'entry_options' => ['label' => false],
-            ]);
+                'allow_add' => true,
+                'by_reference' => false,
+                'allow_delete' => true,
+            ])
+            ->add('submit', SubmitType::class)
         ;
     }
 
@@ -33,6 +46,7 @@ class AlgorithmFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Algorithm::class,
+            'csrf_protection' => false,
         ]);
     }
 }

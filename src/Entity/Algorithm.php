@@ -36,12 +36,12 @@ class Algorithm
     private $year;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $keyLength;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $digestSize;
 
@@ -56,7 +56,7 @@ class Algorithm
     private $description;
 
     /**
-     * @ORM\ManyToMany(targetEntity=CategoryTag::class, inversedBy="algorithms")
+     * @ORM\ManyToMany(targetEntity=CategoryTag::class, inversedBy="algorithms", cascade={"persist"})
      */
     private $tags;
 
@@ -183,6 +183,7 @@ class Algorithm
 
     public function addTag(CategoryTag $tag): self
     {
+        $tag->addAlgorithm($this);
         if (!$this->tags->contains($tag)) {
             $this->tags[] = $tag;
         }

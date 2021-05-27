@@ -16,7 +16,10 @@ class CategoryTagFormType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('description', TextareaType::class)
+            ->add('description', TextareaType::class, [
+                    'required' => false
+                ]
+            )
             ->add('color', ColorType::class, [
                 'html5' => true
             ])
