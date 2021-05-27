@@ -18,7 +18,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class AlgorithmController extends AbstractController
 {
 
-
     /**
      * @Route("/new", name="new")
      * @param Request $request
@@ -55,9 +54,8 @@ class AlgorithmController extends AbstractController
      * @param Algorithm $algorithm
      * @return Response
      */
-    public function index(Algorithm $algorithm): Response
+    public function view(Algorithm $algorithm): Response
     {
-
         return $this->render('algorithm/view.html.twig', [
             'algorithm' => $algorithm
         ]);

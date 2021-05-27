@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f3b7eca-9f95-4bb2-bc5c-ff9884bd1181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210527212132.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/tagEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/algorithm/success.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Algorithm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Algorithm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AlgorithmFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AlgorithmFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CategoryTagFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryTagFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/algorithm/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithm/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/algorithm/view.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithm/view.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +144,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -162,7 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622140546080</updated>
       <workItem from="1622140547646" duration="2677000" />
-      <workItem from="1622144862582" duration="5735000" />
+      <workItem from="1622144862582" duration="7301000" />
     </task>
     <task id="LOCAL-00001" summary="Recreated entities">
       <created>1622140638385</created>
@@ -185,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622144805420</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Article editor now works">
+      <created>1622150674891</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622150674892</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +195,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Recreated entities" />
     <MESSAGE value="Recreated controllers, fixtures and templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recreated controllers, fixtures and templates" />
+    <MESSAGE value="Article editor now works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Article editor now works" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
