@@ -7,6 +7,9 @@
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Algorithms</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Test</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">FAQs</a></li>
+            {% if is_granted('ROLE_EDITOR') %}
+                <li class="nav-item"><a href="{{ path('algorithm_new') }}" class="nav-link link-dark px-2">Write a new article</a></li>
+            {% endif %}
         </ul>
         {% if app.user %}
             <div class="dropdown">
