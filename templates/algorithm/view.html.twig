@@ -11,7 +11,7 @@
 
 {% block body %}
     <div>
-        <h1>{{ algorithm.name }}</h1>
+        {% if is_granted('ROLE_EDITOR') %}
         <div class="btn-group" role="group">
             <a href="{{ path('algorithm_edit', {'name': algorithm.name }) }}" type="button" class="btn btn-primary">
                 <i class="bi bi-pencil-square"></i>
@@ -20,6 +20,8 @@
                 <i class="bi bi-trash-fill"></i>
             </button>
         </div>
+        <h1>{{ algorithm.name }}</h1>
+        {% endif %}
     </div>
     <div id="description"></div>
     <script>
