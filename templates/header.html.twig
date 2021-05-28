@@ -1,3 +1,7 @@
+{% block javascripts %}
+    <script src="{{ asset('js/search.js') }}"></script>
+{% endblock %}
+
 <nav class="py-2 bg-light border-bottom">
     <div class="container d-flex flex-wrap">
         <ul class="nav me-auto">
@@ -19,7 +23,7 @@
                         <img class="rounded-circle" src="/img/users/{{ app.user.profilePicture }}" width="32px"
                              height="32px">
                     {% else %}
-                        <img class="rounded-circle" src="/img/users/default.png" width="32px" height="32px">
+                        <img class="rounded-circle" src="{{ asset('/img/users/default.png') }}" width="32px" height="32px">
                     {% endif %}
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
@@ -43,7 +47,9 @@
             <span class="fs-4">CryptoMark</span>
         </a>
         <form class="col-12 col-lg-auto mb-3 mb-lg-0">
-            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search" onkeyup="showSuggestions(this.value)">
+            <div class="list-group" id="suggestions" style="z-index: 100; position: absolute;">
+            </div>
         </form>
     </div>
 </header>

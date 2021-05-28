@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Algorithm;
 use App\Form\AlgorithmFormType;
+use App\Repository\AlgorithmRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\ORMException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -95,6 +96,17 @@ class AlgorithmController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/search/{name}")
+     */
+    public function search(AlgorithmRepository $repository, string $name): Response {
+        $data = $repository->findByNameAutocomplete($name);
+        return $this->json($data);
+    }
+
+    /**
+     * @param $form
+     */
     private function persistAlgorithm($form) {
         $algorithm = $form->getData();
         $entityManager = $this->getDoctrine()->getManager();

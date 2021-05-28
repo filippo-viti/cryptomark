@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f3b7eca-9f95-4bb2-bc5c-ff9884bd1181" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AlgorithmRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AlgorithmRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +16,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -163,7 +171,7 @@
       <updated>1622140546080</updated>
       <workItem from="1622140547646" duration="2677000" />
       <workItem from="1622144862582" duration="8156000" />
-      <workItem from="1622211134572" duration="8205000" />
+      <workItem from="1622211134572" duration="12530000" />
     </task>
     <task id="LOCAL-00001" summary="Recreated entities">
       <created>1622140638385</created>
@@ -221,7 +229,35 @@
       <option name="project" value="LOCAL" />
       <updated>1622220286960</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added user icon">
+      <created>1622221631322</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1622221631322</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added user icon">
+      <created>1622221994420</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622221994420</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added new algorithm link">
+      <created>1622223980320</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622223980320</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added access control">
+      <created>1622224029341</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622224029341</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +270,10 @@
     <MESSAGE value="Added view algorithm page" />
     <MESSAGE value="Updated edit and add" />
     <MESSAGE value="Added bootstrap icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added bootstrap icons" />
+    <MESSAGE value="Added user icon" />
+    <MESSAGE value="Added new algorithm link" />
+    <MESSAGE value="Added access control" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added access control" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

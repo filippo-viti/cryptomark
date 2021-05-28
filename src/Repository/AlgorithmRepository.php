@@ -19,22 +19,23 @@ class AlgorithmRepository extends ServiceEntityRepository
         parent::__construct($registry, Algorithm::class);
     }
 
-    // /**
-    //  * @return Algorithm[] Returns an array of Algorithm objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @return Algorithm[] Returns an array of Algorithm objects
+     */
+    public function findByNameAutocomplete(string $name): array
     {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT a.name
+            FROM App\Entity\Algorithm a
+            WHERE a.name LIKE :name
+            ORDER BY a.name ASC'
+        )->setParameter('name', "$name%")
+        ->setMaxResults(10);
+
+        return $query->getResult();
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Algorithm
