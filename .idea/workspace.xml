@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f3b7eca-9f95-4bb2-bc5c-ff9884bd1181" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/CategoryTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/CategoryTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/algorithm/view.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithm/view.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="1f3b7eca-9f95-4bb2-bc5c-ff9884bd1181" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,7 +165,7 @@
       <updated>1622140546080</updated>
       <workItem from="1622140547646" duration="2677000" />
       <workItem from="1622144862582" duration="8156000" />
-      <workItem from="1622211134572" duration="19048000" />
+      <workItem from="1622211134572" duration="19349000" />
     </task>
     <task id="LOCAL-00001" summary="Recreated entities">
       <created>1622140638385</created>
@@ -269,7 +265,28 @@
       <option name="project" value="LOCAL" />
       <updated>1622226898397</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Changed color type to string">
+      <created>1622235604046</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1622235604046</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added tags rendering">
+      <created>1622235624638</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1622235624638</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added fixtures for tags and algorithms">
+      <created>1622235713837</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1622235713837</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +304,10 @@
     <MESSAGE value="Added access control" />
     <MESSAGE value="Implemented search bar" />
     <MESSAGE value="Added favicons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added favicons" />
+    <MESSAGE value="Changed color type to string" />
+    <MESSAGE value="Added tags rendering" />
+    <MESSAGE value="Added fixtures for tags and algorithms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fixtures for tags and algorithms" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
