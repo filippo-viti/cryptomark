@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Algorithm;
 use App\Form\AlgorithmFormType;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\ORMException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -44,6 +46,22 @@ class AlgorithmController extends AbstractController
      */
     public function success() {
         // TODO implement success page
+    }
+
+    /**
+     * @Route("/delete/{name}", name="delete")
+     * @IsGranted("ROLE_ADMIN")
+     * @param EntityManagerInterface $em
+     * @param Algorithm $algorithm
+     */
+    public function delete(EntityManagerInterface $em, Algorithm $algorithm) {
+        try {
+            $em->remove($algorithm);
+            $em->flush();
+            return $this->redirectToRoute('app_home');
+        } catch (ORMException $e) {
+        }
+
     }
 
     /**

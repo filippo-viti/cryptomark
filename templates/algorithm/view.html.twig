@@ -2,14 +2,45 @@
 
 {% block title %}Hello AlgorithmController!{% endblock %}
 
-{% block body %}
-    <div id="content"></div>
+{% block javascripts %}
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.7/purify.min.js"
             integrity="sha512-srKA/HGYuusMcB2uqsvHKmqqE39vHU74WIuPBaKS5+wtfI6NquGXQtby+eM7o139a7Gt3szcHS09wou8GK4IJQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>{{ algorithm.name }}</h1>
+        <div class="btn-group" role="group">
+            <a href="{{ path('algorithm_edit', {'name': algorithm.name }) }}" type="button" class="btn btn-primary">
+                <i class="bi bi-pencil-square"></i>
+            </a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                <i class="bi bi-trash-fill"></i>
+            </button>
+        </div>
+    </div>
+    <div id="description"></div>
     <script>
-        document.getElementById('content').innerHTML =
+        document.getElementById('description').innerHTML =
             DOMPurify.sanitize(marked('{{ algorithm.description|e('js') }}'));
     </script>
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Warning</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Do you really want to delete this page?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a href="{{ path('algorithm_delete', {'name': algorithm.name }) }}" type="button" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
