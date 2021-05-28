@@ -10,6 +10,6 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         document.getElementById('content').innerHTML =
-           DOMPurify.sanitize(marked('{{ algorithm.description }}'));
+            DOMPurify.sanitize(marked('{{ algorithm.description|e('js') }}'));
     </script>
 {% endblock %}
