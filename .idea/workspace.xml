@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f3b7eca-9f95-4bb2-bc5c-ff9884bd1181" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/algorithm/editor.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithm/editor.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/CategoryTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/CategoryTag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/algorithm/view.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithm/view.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +169,7 @@
       <updated>1622140546080</updated>
       <workItem from="1622140547646" duration="2677000" />
       <workItem from="1622144862582" duration="8156000" />
-      <workItem from="1622211134572" duration="13222000" />
+      <workItem from="1622211134572" duration="19048000" />
     </task>
     <task id="LOCAL-00001" summary="Recreated entities">
       <created>1622140638385</created>
@@ -260,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622225797338</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added favicons">
+      <created>1622226898397</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1622226898397</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +286,8 @@
     <MESSAGE value="Added new algorithm link" />
     <MESSAGE value="Added access control" />
     <MESSAGE value="Implemented search bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented search bar" />
+    <MESSAGE value="Added favicons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added favicons" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
