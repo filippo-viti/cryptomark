@@ -30,7 +30,7 @@ class CategoryTag
     private $description;
 
     /**
-     * @ORM\Column(type="binary")
+     * @ORM\Column(type="string", length=7)
      */
     private $color;
 
