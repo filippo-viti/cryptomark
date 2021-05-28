@@ -1,16 +1,36 @@
 <nav class="py-2 bg-light border-bottom">
     <div class="container d-flex flex-wrap">
         <ul class="nav me-auto">
-            <li class="nav-item"><a href="{{ path('home') }}" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="{{ path('home') }}" class="nav-link link-dark px-2 active"
+                                    aria-current="page">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">About</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Algorithms</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Test</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">FAQs</a></li>
         </ul>
-        <ul class="nav">
-            <li class="nav-item"><a href="{{ path('app_login') }}" class="nav-link link-dark px-2">Login</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Sign up</a></li>
-        </ul>
+        {% if app.user %}
+            <div class="dropdown">
+                <button class="btn btn-link dropdown-toggle text-white text-decoration-none" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    {% if app.user.profilePicture %}
+                        <img class="rounded-circle" src="/img/users/{{ app.user.profilePicture }}" width="32px"
+                             height="32px">
+                    {% else %}
+                        <img class="rounded-circle" src="/img/users/default.png" width="32px" height="32px">
+                    {% endif %}
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item text-danger" href="{{ path('app_logout') }}">Logout</a></li>
+                </ul>
+            </div>
+        {% else %}
+            <ul class="nav">
+                <li class="nav-item"><a href="{{ path('app_login') }}" class="nav-link link-dark px-2">Login</a></li>
+                <li class="nav-item"><a href="{{ path('app_register') }}" class="nav-link link-dark px-2">Sign up</a>
+                </li>
+            </ul>
+        {% endif %}
     </div>
 </nav>
 <header class="py-3 mb-4 border-bottom">
