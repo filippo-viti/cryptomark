@@ -10,8 +10,7 @@
 {% endblock %}
 
 {% block body %}
-    <div>
-        {% if is_granted('ROLE_EDITOR') %}
+    {% if is_granted('ROLE_EDITOR') %}
         <div class="btn-group" role="group">
             <a href="{{ path('algorithm_edit', {'name': algorithm.name }) }}" type="button" class="btn btn-primary">
                 <i class="bi bi-pencil-square"></i>
@@ -20,15 +19,20 @@
                 <i class="bi bi-trash-fill"></i>
             </button>
         </div>
-        <h1>{{ algorithm.name }}</h1>
-        {% endif %}
-    </div>
+    {% endif %}
+    <h1>{{ algorithm.name }}</h1>
+    <h2>Invented by: {{ algorithm.creator }}</h2>
+    <h2>First introduced in: {{ algorithm.year }} </h2>
+    {% for tag in algorithm.tags %}
+        <span class="badge rounded-pill" style="color: {{ tag.color }}">{{ tag.name }}</span>
+    {% endfor %}
     <div id="description"></div>
     <script>
         document.getElementById('description').innerHTML =
             DOMPurify.sanitize(marked('{{ algorithm.description|e('js') }}'));
     </script>
-    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -40,7 +44,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <a href="{{ path('algorithm_delete', {'name': algorithm.name }) }}" type="button" class="btn btn-danger">Delete</a>
+                    <a href="{{ path('algorithm_delete', {'name': algorithm.name }) }}" type="button"
+                       class="btn btn-danger">Delete</a>
                 </div>
             </div>
         </div>
