@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f3b7eca-9f95-4bb2-bc5c-ff9884bd1181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/comments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c043efb5-d058-4582-be5c-14ae6608f980.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c043efb5-d058-4582-be5c-14ae6608f980.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/algorithm/view.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithm/view.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AlgorithmFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AlgorithmFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CategoryTagFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryTagFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CommentFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CommentFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Algorithm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Algorithm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622302719830</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Implemented comment visualization">
+      <created>1622308933866</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1622308933866</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +383,8 @@
     <MESSAGE value="Added fixtures for Comments" />
     <MESSAGE value="Implemented /algorithm/comments route for getting comments as json" />
     <MESSAGE value="Added route that gets a single comment in json format" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added route that gets a single comment in json format" />
+    <MESSAGE value="Implemented comment visualization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented comment visualization" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
