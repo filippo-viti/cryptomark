@@ -31,6 +31,7 @@ class AlgorithmFormType extends AbstractType
             ->add('digestSize', IntegerType::class, [
                 'required' => false
             ])
+            ->add('shortDescription', TextType::class)
             ->add('description', TextareaType::class, [
                 'row_attr' => ['id' => 'descriptionEditor'],
             ])

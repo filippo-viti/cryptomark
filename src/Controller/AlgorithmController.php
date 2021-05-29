@@ -43,6 +43,7 @@ class AlgorithmController extends AbstractController
         $form = $this->createForm(AlgorithmFormType::class, $algorithm);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success', 'The article has been created');
             $this->persistAlgorithm($form);
         }
         return $this->render('algorithm/editor.html.twig', [
@@ -102,6 +103,7 @@ class AlgorithmController extends AbstractController
         $form->handleRequest($request);
         echo $form->getErrors();
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success', 'The article has been updated');
             $this->persistAlgorithm($form);
         }
         return $this->render('algorithm/editor.html.twig', [
@@ -151,6 +153,6 @@ class AlgorithmController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->persist($algorithm);
         $entityManager->flush();
-        $this->redirectToRoute('algorithm_success');
+        $this->redirectToRoute('algorithm_view', ['name' =>$algorithm->getName()]);
     }
 }

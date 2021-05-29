@@ -40,6 +40,7 @@ class CategoryTagController extends AbstractController
         $form = $this->createForm(CategoryTagFormType::class, $categoryTag);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success', 'The category has been added');
             $this->persistCategoryTag($form);
         }
         return $this->render('category/edit.html.twig', [
@@ -87,6 +88,7 @@ class CategoryTagController extends AbstractController
         $form = $this->createForm(CategoryTagFormType::class, $categoryTag);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success', 'The category has been updated');
             $this->persistCategoryTag($form);
         }
         return $this->render('category/edit.html.twig', [

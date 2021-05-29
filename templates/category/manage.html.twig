@@ -3,6 +3,13 @@
 {% block title %}Hello CategoryController!{% endblock %}
 
 {% block body %}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
     <h2>Manage category tags</h2>
     <ul class="list-group mt-4">
         {% for tag in categories %}

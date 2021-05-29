@@ -11,6 +11,13 @@
 {% endblock %}
 
 {% block body %}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
     {% if is_granted('ROLE_EDITOR') %}
         <div class="btn-group" role="group">
             <a href="{{ path('algorithm_edit', {'name': algorithm.name }) }}" type="button" class="btn btn-primary">
