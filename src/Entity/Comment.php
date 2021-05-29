@@ -6,6 +6,7 @@ use App\Repository\CommentRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=CommentRepository::class)
@@ -16,22 +17,26 @@ class Comment
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"commentTreeGroup"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="text")
+     * @Groups({"commentTreeGroup"})
      */
     private $text;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"commentTreeGroup"})
      */
     private $upvotes;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="comments")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"commentTreeGroup"})
      */
     private $user;
 
@@ -43,6 +48,7 @@ class Comment
     /**
      * @ORM\ManyToOne(targetEntity="Comment", inversedBy="children")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
+     * @Groups({"commentTreeGroup"})
      */
     private $parent;
 
