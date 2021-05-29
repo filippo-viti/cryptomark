@@ -9,6 +9,10 @@ use Doctrine\Persistence\ObjectManager;
 
 class AlgorithmFixtures extends Fixture implements DependentFixtureInterface
 {
+    public const RSA_REFERENCE = 'rsa';
+    public const AES_REFERENCE = 'aes';
+    public const SHA_REFERENCE = 'sha';
+
     public function load(ObjectManager $manager)
     {
         $rsa = new Algorithm();
@@ -65,6 +69,10 @@ Currently, the best public attacks break preimage resistance for 52 out of 64 ro
         $manager->persist($aes);
         $manager->persist($sha);
         $manager->flush();
+
+        $this->addReference(self::RSA_REFERENCE, $rsa);
+        $this->addReference(self::AES_REFERENCE, $aes);
+        $this->addReference(self::SHA_REFERENCE, $sha);
     }
 
     public function getDependencies()

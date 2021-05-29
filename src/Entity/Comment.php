@@ -46,6 +46,12 @@ class Comment
      */
     private $parent;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Algorithm::class, inversedBy="comments")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $algorithm;
+
     public function __construct()
     {
         $this->children = new ArrayCollection();
@@ -130,6 +136,18 @@ class Comment
     public function setParent(?self $parent): self
     {
         $this->parent = $parent;
+
+        return $this;
+    }
+
+    public function getAlgorithm(): ?Algorithm
+    {
+        return $this->algorithm;
+    }
+
+    public function setAlgorithm(?Algorithm $algorithm): self
+    {
+        $this->algorithm = $algorithm;
 
         return $this;
     }
