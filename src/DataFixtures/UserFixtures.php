@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
@@ -14,13 +15,17 @@ class UserFixtures extends Fixture
     public const USER_2_REFERENCE = 'user-2';
 
     private $passwordHasher;
+    private EntityManagerInterface $entityManager;
 
-    public function __construct(UserPasswordHasherInterface $passwordHasher) {
+    public function __construct(UserPasswordHasherInterface $passwordHasher, EntityManagerInterface $entityManager) {
+        $this->entityManager = $entityManager;
         $this->passwordHasher = $passwordHasher;
     }
 
     public function load(ObjectManager $manager)
     {
+        $this->entityManager->getConnection()->executeQuery('ALTER TABLE user AUTO_INCREMENT = 1;');
+
         $user = new User();
         $user->setUsername("admin");
         $user->setPassword($this->passwordHasher->hashPassword(

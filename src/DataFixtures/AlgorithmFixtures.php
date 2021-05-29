@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Algorithm;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectManager;
 
 class AlgorithmFixtures extends Fixture implements DependentFixtureInterface
@@ -12,9 +13,16 @@ class AlgorithmFixtures extends Fixture implements DependentFixtureInterface
     public const RSA_REFERENCE = 'rsa';
     public const AES_REFERENCE = 'aes';
     public const SHA_REFERENCE = 'sha';
+    private EntityManagerInterface $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
 
     public function load(ObjectManager $manager)
     {
+        $this->entityManager->getConnection()->executeQuery('ALTER TABLE algorithm AUTO_INCREMENT = 1;');
         $rsa = new Algorithm();
         $rsa->setName("RSA");
         $rsa->setCreator("Rivest, Shamir, Adleman");

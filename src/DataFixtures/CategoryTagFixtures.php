@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\CategoryTag;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectManager;
 
 class CategoryTagFixtures extends Fixture
@@ -11,9 +12,17 @@ class CategoryTagFixtures extends Fixture
     public const PUBKEY_TAG_REFERENCE = 'pubkey-tag';
     public const SYMMMETRIC_TAG_REFERENCE = 'symmetric-tag';
     public const HASH_TAG_REFERENCE = 'hash-tag';
+    private EntityManagerInterface $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
 
     public function load(ObjectManager $manager)
     {
+        $this->entityManager->getConnection()->executeQuery('ALTER TABLE category_tag AUTO_INCREMENT = 1;');
+
         $tag1 = new CategoryTag();
         $tag1->setName("Public key Cryptography");
         $tag1->setColor("#FF0000");

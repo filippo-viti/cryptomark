@@ -5,12 +5,22 @@ namespace App\DataFixtures;
 use App\Entity\Comment;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectManager;
 
 class CommentFixtures extends Fixture implements DependentFixtureInterface
 {
+    private EntityManagerInterface $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
+
     public function load(ObjectManager $manager)
     {
+        $this->entityManager->getConnection()->executeQuery('ALTER TABLE comment AUTO_INCREMENT = 1;');
+
         $comment1 = new Comment();
         $comment1->setUser($this->getReference(UserFixtures::USER_1_REFERENCE));
         $comment1->setAlgorithm($this->getReference(AlgorithmFixtures::RSA_REFERENCE));
