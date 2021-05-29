@@ -4,7 +4,6 @@
 {% endblock %}
 {% block javascripts %}
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-    <script src="{{ asset("js/tagEditor.js") }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -15,23 +14,9 @@
             </div>
         {% endfor %}
     {% endfor %}
-    {{ form_start(form) }}
-    {{ form_row(form.name) }}
-    {{ form_row(form.creator) }}
-    {{ form_row(form.year) }}
-    <h3>Tags</h3>
-    <ul class="tags" data-prototype="{{ form_widget(form.tags.vars.prototype)|e('html_attr') }}"></ul>
-    <button type="button" class="btn btn-primary add_item_link" data-collection-holder-class="tags">Add a tag
-    </button>
-
-    {{ form_row(form.keyLength) }}
-    {{ form_row(form.digestSize) }}
-    {{ form_row(form.description, {'id' : 'descriptionEditor'}) }}
-    {{ form_row(form.submit) }}
-    {{ form_end(form, {'render_rest': false}) }}
+    {{ form(form) }}
     <script>
         var simplemde = new SimpleMDE({
-            element: document.getElementById("descriptionEditor"),
             forceSync: true
         });
     </script>

@@ -3,8 +3,9 @@
 namespace App\Form;
 
 use App\Entity\Algorithm;
+use App\Entity\CategoryTag;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -30,13 +31,14 @@ class AlgorithmFormType extends AbstractType
             ->add('digestSize', IntegerType::class, [
                 'required' => false
             ])
-            ->add('description', TextareaType::class)
-            ->add('tags', CollectionType::class, [
-                'entry_type' => CategoryTagFormType::class,
-                'entry_options' => ['label' => false],
-                'allow_add' => true,
-                'by_reference' => false,
-                'allow_delete' => true,
+            ->add('description', TextareaType::class, [
+                'row_attr' => ['id' => 'descriptionEditor'],
+            ])
+            ->add('tags', EntityType::class, [
+                'class' => CategoryTag::class,
+                'expanded' => true,
+                'multiple' => true,
+                'choice_label' => 'name',
             ])
             ->add('submit', SubmitType::class)
         ;
