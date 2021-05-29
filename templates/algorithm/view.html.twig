@@ -24,7 +24,8 @@
     <h2>Invented by: {{ algorithm.creator }}</h2>
     <h2>First introduced in: {{ algorithm.year }} </h2>
     {% for tag in algorithm.tags %}
-        <span class="badge rounded-pill" style="color: {{ tag.color }}">{{ tag.name }}</span>
+        <a href="#"><span class="badge rounded-pill" style="background-color: {{ tag.color }}" data-bs-toggle="tooltip"
+                          data-bs-placement="bottom" title="{{ tag.description }}">{{ tag.name }} </span></a>
     {% endfor %}
     <div id="description"></div>
     <script>
