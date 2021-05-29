@@ -7,6 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.7/purify.min.js"
             integrity="sha512-srKA/HGYuusMcB2uqsvHKmqqE39vHU74WIuPBaKS5+wtfI6NquGXQtby+eM7o139a7Gt3szcHS09wou8GK4IJQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ asset('js/comments.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -32,6 +33,10 @@
         document.getElementById('description').innerHTML =
             DOMPurify.sanitize(marked('{{ algorithm.description|e('js') }}'));
     </script>
+    <div id="showComments" class="text-center">
+        <button type="button" class="btn btn-primary rounded-pill" onclick="loadRootComments({{ algorithm.id }})">Load comments</button>
+    </div>
+    <div id="comments"></div>
     <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
          aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

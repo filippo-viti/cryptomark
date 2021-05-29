@@ -42,6 +42,7 @@ class Comment
 
     /**
      * @ORM\OneToMany(targetEntity="Comment", mappedBy="parent")
+     * @Groups({"commentTreeGroup"})
      */
     private $children;
 

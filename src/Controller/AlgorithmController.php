@@ -133,7 +133,7 @@ class AlgorithmController extends AbstractController
             'circular_reference_handler' => function ($object) {
                 return $object->getId();
             },
-            AbstractNormalizer::ATTRIBUTES => ['id', 'text', 'upvotes', 'user', 'parent' => ['id']]
+            AbstractNormalizer::ATTRIBUTES => ['id', 'text', 'upvotes', 'user', 'parent' => ['id'], 'children' => ['id']]
         ]);
 
         return new JsonResponse($data);
