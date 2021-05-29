@@ -4,12 +4,16 @@ function loadRootComments(algorithmId) {
         if (this.readyState === 4 && this.status === 200) {
             let comments = JSON.parse(this.responseText);
             let html = "";
-            comments.forEach(rootComment => {
-                    if (rootComment.parent == null) {
-                        html += renderComment(rootComment)
+            if (comments.length === 0) {
+                html += "<p class='text-muted text-center'>There are no comments</p>";
+            } else {
+                comments.forEach(rootComment => {
+                        if (rootComment.parent == null) {
+                            html += renderComment(rootComment);
+                        }
                     }
-                }
-            )
+                )
+            }
             document.getElementById("comments").innerHTML = html;
             document.getElementById("showComments").hidden = true;
         }
