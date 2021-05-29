@@ -8,6 +8,7 @@
 
 {% block body %}
     <select onchange="getByCategoryId(this.value)" class="form-control">
+        <option value="0" selected>Select a category</option>
         {% for tag in categories %}
             <option value="{{ tag.id }}">{{ tag.name }}</option>
         {% endfor %}

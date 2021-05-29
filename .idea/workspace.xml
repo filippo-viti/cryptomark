@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f3b7eca-9f95-4bb2-bc5c-ff9884bd1181" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryTagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryTagController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CategoryTagFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryTagFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/algorithm/success.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithm/success.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -386,14 +383,20 @@
       <option name="project" value="LOCAL" />
       <updated>1622317812889</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Implemented the category management panel">
+      <created>1622323258822</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1622323258822</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Article editor now works" />
     <MESSAGE value="Added view algorithm page" />
     <MESSAGE value="Updated edit and add" />
     <MESSAGE value="Added bootstrap icons" />
@@ -418,7 +421,8 @@
     <MESSAGE value="Added shortDescription field" />
     <MESSAGE value="Updated homepage" />
     <MESSAGE value="Updated comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated comments" />
+    <MESSAGE value="Implemented the category management panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the category management panel" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
