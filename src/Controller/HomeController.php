@@ -17,7 +17,7 @@ class HomeController extends AbstractController
     {
         $tags = $repository->findAll();
 
-        return $this->render('home/view.html.twig', [
+        return $this->render('home/index.html.twig', [
             'categories' => $tags
         ]);
     }

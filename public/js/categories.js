@@ -6,7 +6,8 @@ function getByCategoryId(id) {
             let listItems = "";
             algorithms.forEach(algorithm => listItems +=
                 `<li class="list-group-item list-group-item">
-                    <a href="/algorithm/${algorithm.name}">${algorithm.name}</a>
+                    <h4><a href="/algorithm/${algorithm.name}">${algorithm.name}</a></h4>
+                    ${algorithm.shortDescription}
                 </li>`
             );
             document.getElementById("algorithms").innerHTML = listItems;
