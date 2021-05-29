@@ -18,7 +18,7 @@ Per prima cosa, dovete creare l'utente su mysql, quindi,
 utilizzando un client MySql o da linea di comando:
 ```sql
 CREATE USER cryptomark@localhost IDENTIFIED BY 'cryptomark';
-GRANT ALL PRIVILEGES ON cryptmark.* TO cryptomark@localhost WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON cryptomark.* TO cryptomark@localhost WITH GRANT OPTION;
 ```
 
 Eseguire i seguenti comandi per creare il database, lo schema e caricare i dati:
