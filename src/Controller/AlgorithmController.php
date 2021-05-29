@@ -9,9 +9,14 @@ use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\ORMException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 /**
  * Class AlgorithmController
@@ -102,6 +107,29 @@ class AlgorithmController extends AbstractController
     public function search(AlgorithmRepository $repository, string $name): Response {
         $data = $repository->findByNameAutocomplete($name);
         return $this->json($data);
+    }
+
+    /**
+     * @Route("/comments/{id}")
+     * @param Algorithm $algorithm
+     * @return JsonResponse
+     */
+    public function getComments(Algorithm $algorithm): Response
+    {
+        $comments = $algorithm->getComments();
+
+        $encoders = array(new JsonEncoder());
+        $normalizers = array(new ObjectNormalizer());
+        $serializer = new Serializer($normalizers, $encoders);
+
+        $jsonContent = $serializer->serialize($comments, 'json', [
+            'circular_reference_handler' => function ($object) {
+                return $object->getId();
+            },
+            AbstractNormalizer::IGNORED_ATTRIBUTES => ['algorithm', 'user', 'text', 'children', 'upvotes']
+        ]);
+
+        return new Response($jsonContent);
     }
 
     /**

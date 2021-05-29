@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f3b7eca-9f95-4bb2-bc5c-ff9884bd1181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210529080120.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CommentFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AlgorithmFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AlgorithmFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Algorithm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Algorithm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +150,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -175,7 +170,7 @@
       <workItem from="1622144862582" duration="8156000" />
       <workItem from="1622211134572" duration="20240000" />
       <workItem from="1622271203915" duration="446000" />
-      <workItem from="1622271753909" duration="6580000" />
+      <workItem from="1622271753909" duration="10052000" />
     </task>
     <task id="LOCAL-00001" summary="Recreated entities">
       <created>1622140638385</created>
@@ -324,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622274172988</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added fixtures for Comments">
+      <created>1622285970487</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1622285970487</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +351,8 @@
     <MESSAGE value="Fixed typo" />
     <MESSAGE value="Added pill badge with popover for the categories" />
     <MESSAGE value="Fixed dropdown color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed dropdown color" />
+    <MESSAGE value="Added fixtures for Comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fixtures for Comments" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
