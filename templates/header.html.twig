@@ -11,10 +11,18 @@
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Algorithms</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Test</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">FAQs</a></li>
-            {% if is_granted('ROLE_EDITOR') %}
-                <li class="nav-item"><a href="{{ path('algorithm_new') }}" class="nav-link link-dark px-2">Write a new article</a></li>
-            {% endif %}
         </ul>
+        {% if is_granted('ROLE_EDITOR') %}
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Actions
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a href="{{ path('algorithm_new') }}" class="dropdown-item">Write a new article</a></li>
+                    <li><a href="{{ path('category_manage') }}" class="dropdown-item">Manage categories</a></li>
+                </ul>
+            </div>
+        {% endif %}
         {% if app.user %}
             <div class="dropdown">
                 <button class="btn btn-link dropdown-toggle text-dark text-decoration-none" type="button" id="dropdownMenuButton1"

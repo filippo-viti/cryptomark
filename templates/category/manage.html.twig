@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+    <h2>Manage category tags</h2>
+    <ul class="list-group mt-4">
+        {% for tag in categories %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div><i class="bi bi-circle-fill me-2" style="color: {{ tag.color }}"></i>{{ tag.name }}</div>
+                <div class="btn-group" role="group">
+                    <a href="{{ path('category_edit', {'id': tag.id }) }}" type="button" class="btn btn-primary">
+                        <i class="bi bi-pencil-square"></i>
+                    </a>
+                    <a href="{{ path('category_delete', {'id': tag.id }) }}" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                        <i class="bi bi-trash-fill"></i>
+                    </a>
+                </div>
+            </li>
+        {% endfor %}
+        <li class="list-group-item text-center">
+            <a href="{{ path('category_add') }}" class="text-decoration-none">Add a new category<i class="bi bi-plus-square-fill ms-2"></i></a>
+        </li>
+    </ul>
+{% endblock %}

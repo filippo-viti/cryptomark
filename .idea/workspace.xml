@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1f3b7eca-9f95-4bb2-bc5c-ff9884bd1181" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryTagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryTagController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CategoryTagFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryTagFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/algorithm/success.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithm/success.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,14 +379,20 @@
       <option name="project" value="LOCAL" />
       <updated>1622313281841</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Updated comments">
+      <created>1622317812889</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1622317812889</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Recreated controllers, fixtures and templates" />
     <MESSAGE value="Article editor now works" />
     <MESSAGE value="Added view algorithm page" />
     <MESSAGE value="Updated edit and add" />
@@ -407,7 +417,8 @@
     <MESSAGE value="Implemented category filter in the homepage" />
     <MESSAGE value="Added shortDescription field" />
     <MESSAGE value="Updated homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated homepage" />
+    <MESSAGE value="Updated comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated comments" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

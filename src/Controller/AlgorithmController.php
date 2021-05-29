@@ -11,9 +11,11 @@ use Doctrine\ORM\ORMException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
 use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
 use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
@@ -40,7 +42,6 @@ class AlgorithmController extends AbstractController
 
         $form = $this->createForm(AlgorithmFormType::class, $algorithm);
         $form->handleRequest($request);
-        echo $form->getErrors();
         if ($form->isSubmitted() && $form->isValid()) {
             $this->persistAlgorithm($form);
         }
@@ -62,6 +63,7 @@ class AlgorithmController extends AbstractController
      * @IsGranted("ROLE_ADMIN")
      * @param EntityManagerInterface $em
      * @param Algorithm $algorithm
+     * @return RedirectResponse
      */
     public function delete(EntityManagerInterface $em, Algorithm $algorithm)
     {
@@ -120,6 +122,7 @@ class AlgorithmController extends AbstractController
      * @Route("/comments/{id}")
      * @param Algorithm $algorithm
      * @return JsonResponse
+     * @throws ExceptionInterface
      */
     public function getComments(Algorithm $algorithm): JsonResponse
     {

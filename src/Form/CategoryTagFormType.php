@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\CategoryTag;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ColorType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -23,6 +24,7 @@ class CategoryTagFormType extends AbstractType
             ->add('color', ColorType::class, [
                 'html5' => true
             ])
+            ->add('submit', SubmitType::class)
         ;
     }
 
