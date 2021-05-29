@@ -54,7 +54,6 @@ class Algorithm
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Groups({"byCategoryGroup"})
      */
     private $description;
 
@@ -67,6 +66,12 @@ class Algorithm
      * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="algorithm", orphanRemoval=true)
      */
     private $comments;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Groups({"byCategoryGroup"})
+     */
+    private $shortDescription;
 
     public function __construct()
     {
@@ -233,6 +238,18 @@ class Algorithm
                 $comment->setAlgorithm(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getShortDescription(): ?string
+    {
+        return $this->shortDescription;
+    }
+
+    public function setShortDescription(string $shortDescription): self
+    {
+        $this->shortDescription = $shortDescription;
 
         return $this;
     }

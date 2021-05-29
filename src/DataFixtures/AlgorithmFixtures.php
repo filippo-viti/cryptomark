@@ -28,6 +28,7 @@ class AlgorithmFixtures extends Fixture implements DependentFixtureInterface
         $rsa->setCreator("Rivest, Shamir, Adleman");
         $rsa->setYear(1977);
         $rsa->setKeyLength(1024);
+        $rsa->setShortDescription("RSA (Rivest–Shamir–Adleman) is a public-key cryptosystem that is widely used for secure data transmission.");
         $rsa->setDescription('## Introduction  
 RSA (Rivest–Shamir–Adleman) is a public-key cryptosystem that is widely used for secure data transmission. It is also one of the oldest. The acronym RSA comes from the surnames of Ron Rivest, Adi Shamir and Leonard Adleman, who publicly described the algorithm in 1977. An equivalent system was developed secretly, in 1973 at GCHQ (the British signals intelligence agency), by the English mathematician Clifford Cocks. That system was declassified in 1997.[1]
 
@@ -44,6 +45,7 @@ RSA is a relatively slow algorithm. Because of this, it is not commonly used to 
         $aes->setCreator("Vincent Rijmen, Joan Daemen");
         $aes->setYear(1998);
         $aes->setKeyLength(256);
+        $aes->setShortDescription("The Advanced Encryption Standard (AES), also known by its original name Rijndael, is a specification for the encryption of electronic data established by the U.S. National Institute of Standards");
         $aes->setDescription('## Introduction  
 The Advanced Encryption Standard (AES), also known by its original name Rijndael (Dutch pronunciation: [ˈrɛindaːl]),[3] is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001.[4]
 
@@ -57,11 +59,31 @@ AES is included in the ISO/IEC 18033-3 standard. AES became effective as a U.S. 
         ');
         $aes->addTag($this->getReference(CategoryTagFixtures::SYMMMETRIC_TAG_REFERENCE));
 
+        $md5 = new Algorithm();
+        $md5->setName("MD5");
+        $md5->setCreator("Ronald Rivest");
+        $md5->setYear(1992);
+        $md5->setDigestSize(128);
+        $md5->setShortDescription("The MD5 message-digest algorithm is a widely used hash function producing a 128-bit hash value.");
+        $md5->setDescription('## Introduction  
+        The MD5 message-digest algorithm is a widely used hash function producing a 128-bit hash value. Although MD5 was initially designed to be used as a cryptographic hash function, it has been found to suffer from extensive vulnerabilities. It can still be used as a checksum to verify data integrity, but only against unintentional corruption. It remains suitable for other non-cryptographic purposes, for example for determining the partition for a particular key in a partitioned database.[3]
+
+MD5 was designed by Ronald Rivest in 1991 to replace an earlier hash function MD4,[4] and was specified in 1992 as RFC 1321.
+
+One basic requirement of any cryptographic hash function is that it should be computationally infeasible to find two distinct messages that hash to the same value. MD5 fails this requirement catastrophically; such collisions can be found in seconds on an ordinary home computer.
+
+The weaknesses of MD5 have been exploited in the field, most infamously by the Flame malware in 2012. The CMU Software Engineering Institute considers MD5 essentially "cryptographically broken and unsuitable for further use".[5]
+
+As of 2019, MD5 continues to be widely used, in spite of its well-documented weaknesses and deprecation by security experts
+');
+        $md5->addTag($this->getReference(CategoryTagFixtures::HASH_TAG_REFERENCE));
+
         $sha = new Algorithm();
         $sha->setName("SHA-2");
         $sha->setCreator("NSA");
         $sha->setYear(2001);
         $sha->setDigestSize(256);
+        $sha->setShortDescription("SHA-2 (Secure Hash Algorithm 2) is a set of cryptographic hash functions designed by the United States National Security Agency (NSA) and first published in 2001.");
         $sha->setDescription('## Introduction  
 SHA-2 (Secure Hash Algorithm 2) is a set of cryptographic hash functions designed by the United States National Security Agency (NSA) and first published in 2001.[3][4] They are built using the Merkle–Damgård construction, from a one-way compression function itself built using the Davies–Meyer structure from a specialized block cipher.
 
@@ -75,6 +97,7 @@ Currently, the best public attacks break preimage resistance for 52 out of 64 ro
 
         $manager->persist($rsa);
         $manager->persist($aes);
+        $manager->persist($md5);
         $manager->persist($sha);
         $manager->flush();
 
