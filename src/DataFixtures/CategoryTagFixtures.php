@@ -31,7 +31,7 @@ class CategoryTagFixtures extends Fixture
         $tag2 = new CategoryTag();
         $tag2->setName("Symmetric key Cryptography");
         $tag2->setColor("#00FF00");
-        $tag2->setDescription("Symmetric-key algorithms[a] are algorithms for cryptography that use the same cryptographic keys for both the encryption of plaintext and the decryption of ciphertext. The keys may be identical, or there may be a simple transformation to go between the two keys.[1] The keys, in practice, represent a shared secret between two or more parties that can be used to maintain a private information link.[2] The requirement that both parties have access to the secret key is one of the main drawbacks of symmetric-key encryption, in comparison to public-key encryption (also known as asymmetric-key encryption");
+        $tag2->setDescription("Symmetric-key algorithms are algorithms for cryptography that use the same cryptographic keys for both the encryption of plaintext and the decryption of ciphertext. The keys may be identical, or there may be a simple transformation to go between the two keys. The keys, in practice, represent a shared secret between two or more parties that can be used to maintain a private information link. The requirement that both parties have access to the secret key is one of the main drawbacks of symmetric-key encryption, in comparison to public-key encryption (also known as asymmetric-key encryption");
 
         $tag3 = new CategoryTag();
         $tag3->setName("Hash Function");

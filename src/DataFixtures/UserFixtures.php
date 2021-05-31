@@ -39,7 +39,7 @@ class UserFixtures extends Fixture
         $manager->persist($user);
 
         $user1 = new User();
-        $user1->setUsername("dummy_user_1");
+        $user1->setUsername("ExampleUser1");
         $user1->setPassword($this->passwordHasher->hashPassword(
             $user1,
             "Abcd1234"
@@ -48,7 +48,7 @@ class UserFixtures extends Fixture
         $manager->persist($user1);
 
         $user2 = new User();
-        $user2->setUsername("dummy_user_2");
+        $user2->setUsername("ExampleUser2");
         $user2->setPassword($this->passwordHasher->hashPassword(
             $user2,
             "Abcd1234"
