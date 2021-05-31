@@ -24,11 +24,6 @@ class Benchmark
     private $score;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $cpu;
-
-    /**
      * @ORM\Column(type="datetime")
      */
     private $date;
@@ -45,6 +40,12 @@ class Benchmark
      */
     private $user;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Cpu::class, inversedBy="benchmarks")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $cpu;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -58,18 +59,6 @@ class Benchmark
     public function setScore(string $score): self
     {
         $this->score = $score;
-
-        return $this;
-    }
-
-    public function getCpu(): ?string
-    {
-        return $this->cpu;
-    }
-
-    public function setCpu(string $cpu): self
-    {
-        $this->cpu = $cpu;
 
         return $this;
     }
@@ -106,6 +95,18 @@ class Benchmark
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getCpu(): ?Cpu
+    {
+        return $this->cpu;
+    }
+
+    public function setCpu(?Cpu $cpu): self
+    {
+        $this->cpu = $cpu;
 
         return $this;
     }

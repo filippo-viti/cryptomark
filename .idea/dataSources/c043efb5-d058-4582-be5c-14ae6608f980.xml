@@ -906,288 +906,340 @@ cryptomark|schema||cryptomark||grant option|G</Grants>
     <table id="281" parent="2" name="comment">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="282" parent="2" name="doctrine_migration_versions">
-      <Collation>utf8_unicode_ci</Collation>
-    </table>
-    <table id="283" parent="2" name="user">
+    <table id="282" parent="2" name="cpu">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <column id="284" parent="277" name="id">
+    <table id="283" parent="2" name="doctrine_migration_versions">
+      <Collation>utf8_unicode_ci</Collation>
+    </table>
+    <table id="284" parent="2" name="user">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <column id="285" parent="277" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="285" parent="277" name="name">
+    <column id="286" parent="277" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="286" parent="277" name="creator">
+    <column id="287" parent="277" name="creator">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="287" parent="277" name="year">
+    <column id="288" parent="277" name="year">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="288" parent="277" name="key_length">
+    <column id="289" parent="277" name="key_length">
       <Position>5</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="289" parent="277" name="digest_size">
+    <column id="290" parent="277" name="digest_size">
       <Position>6</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="290" parent="277" name="description">
+    <column id="291" parent="277" name="description">
       <Position>7</Position>
       <DataType>longtext|0s</DataType>
     </column>
-    <index id="291" parent="277" name="UNIQ_9505CCB95E237E06">
+    <column id="292" parent="277" name="short_description">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="293" parent="277" name="UNIQ_9505CCB95E237E06">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="292" parent="277" name="PRIMARY">
+    <key id="294" parent="277" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="293" parent="277" name="UNIQ_9505CCB95E237E06">
+    <key id="295" parent="277" name="UNIQ_9505CCB95E237E06">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>UNIQ_9505CCB95E237E06</UnderlyingIndexName>
     </key>
-    <column id="294" parent="278" name="algorithm_id">
+    <column id="296" parent="278" name="algorithm_id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="295" parent="278" name="category_tag_id">
+    <column id="297" parent="278" name="category_tag_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="296" parent="278" name="IDX_5FEDC0DEBBEB6CF7">
+    <index id="298" parent="278" name="IDX_5FEDC0DEBBEB6CF7">
       <ColNames>algorithm_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="297" parent="278" name="IDX_5FEDC0DEB53AA96A">
+    <index id="299" parent="278" name="IDX_5FEDC0DEB53AA96A">
       <ColNames>category_tag_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="298" parent="278" name="PRIMARY">
+    <key id="300" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>algorithm_id
 category_tag_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="299" parent="278" name="FK_5FEDC0DEBBEB6CF7">
+    <foreign-key id="301" parent="278" name="FK_5FEDC0DEBBEB6CF7">
       <ColNames>algorithm_id</ColNames>
       <RefTableName>algorithm</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="300" parent="278" name="FK_5FEDC0DEB53AA96A">
+    <foreign-key id="302" parent="278" name="FK_5FEDC0DEB53AA96A">
       <ColNames>category_tag_id</ColNames>
       <RefTableName>category_tag</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="301" parent="279" name="id">
+    <column id="303" parent="279" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="302" parent="279" name="algorithm_id">
+    <column id="304" parent="279" name="algorithm_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="303" parent="279" name="user_id">
+    <column id="305" parent="279" name="user_id">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="304" parent="279" name="score">
+    <column id="306" parent="279" name="score">
       <Position>4</Position>
       <DataType>decimal(10)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="305" parent="279" name="cpu">
+    <column id="307" parent="279" name="date">
       <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="306" parent="279" name="date">
-      <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="307" parent="279" name="IDX_B70C48FEBBEB6CF7">
+    <column id="308" parent="279" name="cpu_id">
+      <Position>6</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="309" parent="279" name="IDX_B70C48FEBBEB6CF7">
       <ColNames>algorithm_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="308" parent="279" name="IDX_B70C48FEA76ED395">
+    <index id="310" parent="279" name="IDX_B70C48FEA76ED395">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="309" parent="279" name="PRIMARY">
+    <index id="311" parent="279" name="IDX_B70C48FE3917014">
+      <ColNames>cpu_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="312" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="310" parent="279" name="FK_B70C48FEBBEB6CF7">
+    <foreign-key id="313" parent="279" name="FK_B70C48FEBBEB6CF7">
       <ColNames>algorithm_id</ColNames>
       <RefTableName>algorithm</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="311" parent="279" name="FK_B70C48FEA76ED395">
+    <foreign-key id="314" parent="279" name="FK_B70C48FEA76ED395">
       <ColNames>user_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="312" parent="280" name="id">
+    <foreign-key id="315" parent="279" name="FK_B70C48FE3917014">
+      <ColNames>cpu_id</ColNames>
+      <RefTableName>cpu</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="316" parent="280" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="313" parent="280" name="name">
+    <column id="317" parent="280" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="314" parent="280" name="description">
+    <column id="318" parent="280" name="description">
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
     </column>
-    <column id="315" parent="280" name="color">
+    <column id="319" parent="280" name="color">
       <Position>4</Position>
       <DataType>varchar(7)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="316" parent="280" name="PRIMARY">
+    <key id="320" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="317" parent="281" name="id">
+    <column id="321" parent="281" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="318" parent="281" name="user_id">
+    <column id="322" parent="281" name="user_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="319" parent="281" name="parent_id">
+    <column id="323" parent="281" name="parent_id">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="320" parent="281" name="text">
+    <column id="324" parent="281" name="text">
       <Position>4</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="321" parent="281" name="upvotes">
+    <column id="325" parent="281" name="upvotes">
       <Position>5</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="322" parent="281" name="algorithm_id">
+    <column id="326" parent="281" name="algorithm_id">
       <Position>6</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="323" parent="281" name="IDX_9474526CA76ED395">
+    <index id="327" parent="281" name="IDX_9474526CA76ED395">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="324" parent="281" name="IDX_9474526C727ACA70">
+    <index id="328" parent="281" name="IDX_9474526C727ACA70">
       <ColNames>parent_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="325" parent="281" name="IDX_9474526CBBEB6CF7">
+    <index id="329" parent="281" name="IDX_9474526CBBEB6CF7">
       <ColNames>algorithm_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="326" parent="281" name="PRIMARY">
+    <key id="330" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="327" parent="281" name="FK_9474526CA76ED395">
+    <foreign-key id="331" parent="281" name="FK_9474526CA76ED395">
       <ColNames>user_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="328" parent="281" name="FK_9474526C727ACA70">
+    <foreign-key id="332" parent="281" name="FK_9474526C727ACA70">
       <ColNames>parent_id</ColNames>
       <RefTableName>comment</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="329" parent="281" name="FK_9474526CBBEB6CF7">
+    <foreign-key id="333" parent="281" name="FK_9474526CBBEB6CF7">
       <ColNames>algorithm_id</ColNames>
       <RefTableName>algorithm</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="330" parent="282" name="version">
-      <Position>1</Position>
-      <DataType>varchar(191)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="331" parent="282" name="executed_at">
-      <Position>2</Position>
-      <DataType>datetime|0s</DataType>
-    </column>
-    <column id="332" parent="282" name="execution_time">
-      <Position>3</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <key id="333" parent="282" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>version</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="334" parent="283" name="id">
+    <column id="334" parent="282" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="335" parent="283" name="username">
+    <column id="335" parent="282" name="manufacturer">
       <Position>2</Position>
-      <DataType>varchar(180)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="336" parent="283" name="roles">
+    <column id="336" parent="282" name="name">
       <Position>3</Position>
-      <DataType>json|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="337" parent="283" name="password">
+    <column id="337" parent="282" name="cores">
       <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="338" parent="283" name="profile_picture">
+    <column id="338" parent="282" name="threads">
       <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <index id="339" parent="283" name="UNIQ_8D93D649F85E0677">
-      <ColNames>username</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <key id="340" parent="283" name="PRIMARY">
+    <column id="339" parent="282" name="clock_speed">
+      <Position>6</Position>
+      <DataType>decimal(3,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="340" parent="282" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="341" parent="283" name="UNIQ_8D93D649F85E0677">
+    <column id="341" parent="283" name="version">
+      <Position>1</Position>
+      <DataType>varchar(191)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="342" parent="283" name="executed_at">
+      <Position>2</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="343" parent="283" name="execution_time">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <key id="344" parent="283" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>version</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="345" parent="284" name="id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="346" parent="284" name="username">
+      <Position>2</Position>
+      <DataType>varchar(180)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="347" parent="284" name="roles">
+      <Position>3</Position>
+      <DataType>json|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="348" parent="284" name="password">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="349" parent="284" name="profile_picture">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <index id="350" parent="284" name="UNIQ_8D93D649F85E0677">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="351" parent="284" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="352" parent="284" name="UNIQ_8D93D649F85E0677">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>UNIQ_8D93D649F85E0677</UnderlyingIndexName>
     </key>

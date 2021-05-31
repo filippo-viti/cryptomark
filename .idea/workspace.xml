@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f3b7eca-9f95-4bb2-bc5c-ff9884bd1181" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c043efb5-d058-4582-be5c-14ae6608f980.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c043efb5-d058-4582-be5c-14ae6608f980.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AlgorithmController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryTagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryTagController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AlgorithmFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AlgorithmFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/algorithm/editor.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithm/editor.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/algorithm/success.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/algorithm/view.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithm/view.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/manage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/manage.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/view.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Benchmark.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Benchmark.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +172,10 @@
       <workItem from="1622211134572" duration="20240000" />
       <workItem from="1622271203915" duration="446000" />
       <workItem from="1622271753909" duration="10052000" />
+      <workItem from="1622327371834" duration="16000" />
+      <workItem from="1622408181396" duration="3594000" />
+      <workItem from="1622456656439" duration="660000" />
+      <workItem from="1622458308755" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="Recreated entities">
       <created>1622140638385</created>
@@ -411,14 +408,20 @@
       <option name="project" value="LOCAL" />
       <updated>1622325640178</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Added flashes">
+      <created>1622327226310</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1622327226310</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added bootstrap icons" />
     <MESSAGE value="Added user icon" />
     <MESSAGE value="Added new algorithm link" />
     <MESSAGE value="Added access control" />
@@ -443,7 +446,8 @@
     <MESSAGE value="Implemented the category management panel" />
     <MESSAGE value="Added default option for the category filter" />
     <MESSAGE value="Restyled the tag editor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restyled the tag editor" />
+    <MESSAGE value="Added flashes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added flashes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
