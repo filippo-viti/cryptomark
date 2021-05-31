@@ -27,6 +27,7 @@ symfony console doctrine:database:create
 symfony console doctrine:schema:create
 symfony console doctrine:fixtures:load
 ```
+In alternativa, in caso di problemi con questi comandi, è possibile importare il DB utilizzando il file ```dump-cryptomark.sql```
 
 ## Avvio del server
 Per avviare il webserver:
